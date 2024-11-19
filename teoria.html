@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Módulo Educativo - Teoría de Transformadores</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Meta para diseño responsivo -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Agregar el script de MathJax para notación matemática -->
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="teoria">
+  <header>
+    <img src="logo.png" alt="Logo" class="logo">
+    <h1>Módulo Educativo - Teoría de Transformadores</h1>
+  </header>
+
+  <main>
+    <div class="teoria-container">
+      <!-- Contenido de la teoría -->
+      <h2>1. Definición de un Transformador</h2>
+      <p>Un <strong>transformador</strong> es un dispositivo electromagnético utilizado para cambiar el nivel de voltaje en un circuito de corriente alterna (CA). Se basa en el principio de la inducción electromagnética, donde un cambio de corriente en un circuito primario induce una corriente en un circuito secundario, sin que exista contacto eléctrico entre ambos.</p>
+
+      <h2>2. Principio de Funcionamiento</h2>
+      <p>El transformador opera bajo el principio de <strong>inducción mutua</strong>, en el que un flujo magnético variable generado por la corriente en el devanado primario induce un voltaje en el devanado secundario. Este fenómeno ocurre gracias al acoplamiento magnético a través de un núcleo ferromagnético.</p>
+
+      <h2>3. Tipos de Transformadores</h2>
+      <p>Los transformadores se pueden clasificar de diversas maneras según su aplicación, construcción y características de funcionamiento:</p>
+
+      <h3>a) Según la Fase</h3>
+      <ul>
+        <li><strong>Transformadores Monofásicos</strong>: Utilizan un solo par de devanados (primario y secundario) y se usan comúnmente en aplicaciones de menor escala, como en equipos domésticos.</li>
+        <li><strong>Transformadores Trifásicos</strong>: Compuestos por tres conjuntos de devanados y diseñados para sistemas de transmisión y distribución de energía eléctrica en instalaciones industriales y redes de energía.</li>
+      </ul>
+
+      <h3>b) Según la Función</h3>
+      <ul>
+        <li><strong>Transformadores Elevadores</strong>: Aumentan el nivel de voltaje del circuito de entrada al circuito de salida. Se utilizan en la transmisión de energía para reducir las pérdidas de potencia.</li>
+        <li><strong>Transformadores Reductores</strong>: Disminuyen el voltaje de la entrada en el circuito de salida. Son comunes en transformadores de distribución para llevar la electricidad a niveles seguros de uso en hogares y empresas.</li>
+      </ul>
+
+      <h3>c) Según la Construcción del Núcleo</h3>
+      <ul>
+        <li><strong>Transformadores de Núcleo Laminado</strong>: Construidos con láminas delgadas de acero eléctrico apiladas para reducir las pérdidas por corrientes de Foucault.</li>
+        <li><strong>Transformadores de Núcleo Toroidal</strong>: Utilizan un núcleo de forma circular que reduce las pérdidas magnéticas y mejora la eficiencia. Son más compactos y silenciosos.</li>
+      </ul>
+
+      <h3>d) Otros Tipos Específicos</h3>
+      <ul>
+        <li><strong>Transformadores de Potencia</strong>: Utilizados en subestaciones eléctricas para transferir grandes cantidades de energía a altos voltajes.</li>
+        <li><strong>Transformadores de Distribución</strong>: Reducen la energía a niveles de voltaje que pueden ser utilizados por los consumidores finales.</li>
+        <li><strong>Transformadores de Aislamiento</strong>: Separan eléctricamente dos circuitos, proporcionando seguridad y protegiendo los equipos de posibles picos de voltaje.</li>
+      </ul>
+
+      <h2>4. Partes de un Transformador</h2>
+      <p>Un transformador consta de los siguientes componentes principales:</p>
+      <ul>
+        <li><strong>Núcleo Magnético</strong>: Generalmente de acero al silicio, que concentra y guía el flujo magnético entre los devanados. Minimiza las pérdidas magnéticas.</li>
+        <li><strong>Devanado Primario</strong>: El circuito de entrada donde se aplica la corriente alterna.</li>
+        <li><strong>Devanado Secundario</strong>: El circuito de salida donde se induce el voltaje transformado.</li>
+        <li><strong>Aislamiento</strong>: Material que separa eléctricamente los devanados y evita cortocircuitos.</li>
+      </ul>
+
+      <h2>5. Principales Ecuaciones y Cálculos</h2>
+      <p><strong>Relación de Transformación:</strong></p>
+      <p>\[
+      \frac{V_p}{V_s} = \frac{N_p}{N_s}
+      \]</p>
+      <p>donde \( V_p \) y \( V_s \) son los voltajes en el primario y secundario, y \( N_p \) y \( N_s \) son las espiras en el primario y secundario, respectivamente.</p>
+
+      <p><strong>Potencia Conservada (idealmente sin pérdidas):</strong></p>
+      <p>\[
+      P_p = P_s \implies V_p \cdot I_p = V_s \cdot I_s
+      \]</p>
+
+      <p><strong>Pérdidas en el Transformador:</strong></p>
+      <ul>
+        <li><strong>Pérdidas en el Cobre</strong>: Ocasionadas por la resistencia de los devanados y calculadas con:
+        \[
+        P_{\text{cobre}} = I^2 \times R
+        \]</li>
+        <li><strong>Pérdidas en el Núcleo</strong>: Debidas a la histéresis y corrientes de Foucault, dependen de la frecuencia y propiedades del material del núcleo.</li>
+      </ul>
+
+      <h2>6. Cálculos Básicos de Diseño</h2>
+      <p><strong>Número de Espiras por Voltio:</strong></p>
+      <p>\[
+      \text{Espiras por voltio} = \frac{K}{\text{Área Transversal}}
+      \]</p>
+      <p>donde \( K \) es una constante que varía según el diseño (en este caso, 37.54).</p>
+
+      <p><strong>Cálculo de la Potencia Máxima:</strong></p>
+      <p>\[
+      P_{\text{máx}} = (\text{Área})^2
+      \]</p>
+
+      <p><strong>Cálculo de Corriente:</strong></p>
+      <p>\[
+      I = \frac{P}{V}
+      \]</p>
+
+      <h2>7. Usos y Aplicaciones de los Transformadores</h2>
+      <p>Los transformadores tienen múltiples aplicaciones:</p>
+      <ul>
+        <li><strong>Transmisión de Energía Eléctrica</strong>: Los transformadores elevadores y reductores se utilizan para minimizar las pérdidas en la transmisión y garantizar la entrega de energía eficiente desde las centrales eléctricas hasta los consumidores.</li>
+        <li><strong>Electrónica de Consumo</strong>: En dispositivos como cargadores de teléfonos, computadoras portátiles y televisores, donde es necesario convertir el voltaje de la red eléctrica a un nivel utilizable.</li>
+        <li><strong>Sistemas de Aislamiento Eléctrico</strong>: Proveen aislamiento entre circuitos para proteger contra sobrecargas y picos de voltaje.</li>
+        <li><strong>Instalaciones Industriales</strong>: Los transformadores trifásicos se emplean en motores eléctricos y equipos de gran potencia para alimentar máquinas y procesos industriales.</li>
+      </ul>
+
+      <h2>8. Ventajas y Desventajas de los Transformadores</h2>
+      <p><strong>Ventajas:</strong></p>
+      <ul>
+        <li>Alta eficiencia, especialmente en modelos bien diseñados.</li>
+        <li>Capacidad de operar de manera continua con bajo mantenimiento.</li>
+        <li>Reducción de pérdidas en la transmisión de energía a larga distancia.</li>
+      </ul>
+
+      <p><strong>Desventajas:</strong></p>
+      <ul>
+        <li>Pérdidas de energía debido a la histéresis y las corrientes de Foucault en el núcleo.</li>
+        <li>Tamaño y peso significativos en aplicaciones de gran capacidad.</li>
+        <li>Costos elevados de fabricación, especialmente en modelos especiales o de alta potencia.</li>
+      </ul>
+
+      <h2>9. Conceptos Avanzados</h2>
+      <p><strong>Factor de Corrección</strong>: Ajusta la sección transversal del núcleo y otras variables para optimizar el rendimiento bajo diferentes condiciones de carga.</p>
+
+      <p><strong>Eficiencia del Transformador:</strong></p>
+      <p>\[
+      \eta = \left( \frac{P_{\text{salida}}}{P_{\text{entrada}}} \right) \times 100\%
+      \]</p>
+
+      <p><strong>Regulación de Voltaje:</strong> Indica la variación en el voltaje de salida a medida que cambia la carga:</p>
+      <p>\[
+      \text{Regulación} = \frac{V_{\text{sin carga}} - V_{\text{carga}}}{V_{\text{carga}}} \times 100\%
+      \]</p>
+
+      <h2>10. Consideraciones de Diseño</h2>
+      <p><strong>Selección del Calibre del Alambre (AWG)</strong>: Basada en la corriente calculada para el primario y el secundario, eligiendo un calibre que soporte la corriente sin sobrecalentamiento.</p>
+
+      <p><strong>Material del Núcleo</strong>: Influye en las pérdidas y en la eficiencia general. Los núcleos de acero al silicio y de ferrita son comunes en aplicaciones de alta frecuencia.</p>
+    </div>
+
+    <button onclick="window.location.href='index.html'">Volver al Inicio</button>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Calculadora de Transformadores. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

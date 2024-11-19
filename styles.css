@@ -1,0 +1,364 @@
+/* styles.css */
+
+/* Estilos generales */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+/* Fondos personalizados para cada página */
+body.inicio {
+  background-image: url('trafo1.webp');
+}
+
+body.resultados {
+  background-image: url('trafo3.webp');
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+body.historial, body.teoria, body.ejercicios {
+  background-image: url('trafo1.webp');
+}
+
+/* Estilos para el encabezado y pie de página */
+header, footer {
+  text-align: center;
+  background-color: rgba(0, 51, 102, 0.8);
+  padding: 20px;
+  width: 100%;
+}
+
+header h1, footer p {
+  color: #fff;
+}
+
+header p {
+  color: #ddd;
+  font-style: italic;
+}
+
+/* Estilos para el logo */
+.logo {
+  width: 150px;
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+  animation: fadeIn 1s;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+/* Estilos para títulos y textos */
+h1 {
+  margin: 10px 0;
+  font-size: 2.5em;
+  animation: fadeInDown 1s;
+}
+
+h2 {
+  color: #003366;
+}
+
+h3 {
+  color: #00509e;
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* Estilos para el contenedor principal */
+.calculator, .teoria-container, .ejercicios-container, .historial-container {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 25px;
+  width: 90%;
+  max-width: 800px;
+  border-radius: 10px;
+  margin: 20px auto;
+  animation: fadeInUp 1s;
+}
+
+.resultados-container, .charts-container, .formulas-container, .simulacion-container {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #333;
+  padding: 25px;
+  border-radius: 10px;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 800px;
+  animation: fadeInUp 1s;
+}
+
+/* Estilos para formularios y etiquetas */
+label {
+  display: block;
+  font-weight: bold;
+  color: #ddd;
+  margin-top: 10px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+input:focus, select:focus, textarea:focus {
+  border: 2px solid #00509e;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+/* Estilos para botones */
+button {
+  background-color: #003366;
+  color: white;
+  padding: 12px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1.1em;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #00509e;
+  transform: translateY(-2px);
+}
+
+button[type="button"] {
+  width: auto;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+button:last-child {
+  margin-right: 0;
+}
+
+/* Estilos para agrupar los botones */
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.button-group button {
+  width: auto;
+  margin: 10px;
+}
+
+/* Estilos específicos para la página de resultados */
+.resultados-container p {
+  font-size: 1.1em;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.resultados-container p i {
+  margin-right: 10px;
+  color: #00509e;
+}
+
+.simulacion-container label {
+  font-weight: bold;
+  color: #333;
+}
+
+#factorCorreccionSlider {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Estilos para las gráficas */
+canvas {
+  margin-top: 20px;
+  max-width: 100%;
+}
+
+/* Estilos para el contenido colapsable */
+.collapsible {
+  background-color: #003366;
+  color: white;
+  cursor: pointer;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 1.2em;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.active, .collapsible:hover {
+  background-color: #00509e;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #333;
+  border-radius: 5px;
+}
+
+.content p {
+  margin: 10px 0;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+/* Estilos para la página de teoría */
+.teoria-container {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #333;
+  padding: 25px;
+  border-radius: 10px;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 800px;
+  animation: fadeInUp 1s;
+}
+
+.teoria-container h2 {
+  margin-top: 20px;
+  color: #003366;
+}
+
+.teoria-container h3 {
+  margin-top: 15px;
+  color: #00509e;
+}
+
+.teoria-container p {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.teoria-container ul {
+  margin: 10px 0 10px 20px;
+  list-style-type: disc;
+}
+
+.teoria-container li {
+  margin-bottom: 5px;
+}
+
+/* Estilos para la página de ejercicios */
+.ejercicios-container {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #333;
+  padding: 25px;
+  border-radius: 10px;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 800px;
+  animation: fadeInUp 1s;
+}
+
+.ejercicios-container h2 {
+  margin-top: 20px;
+  color: #003366;
+}
+
+.ejercicios-container p {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.ejercicios-container form {
+  margin-top: 15px;
+}
+
+#feedback1 p {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Estilos para la página de historial */
+.historial-item {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.historial-item p {
+  margin: 5px 0;
+}
+
+.historial-item button {
+  width: auto;
+  margin-top: 10px;
+}
+
+/* Animaciones */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  } to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  } to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  } to {
+    opacity: 1;
+  }
+}
+
+/* Diseño responsivo */
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  .calculator, .resultados-container, .charts-container, .formulas-container, .teoria-container, .ejercicios-container, .historial-container {
+    padding: 15px;
+    width: 95%;
+  }
+
+  label, button {
+    font-size: 1em;
+  }
+
+  input, select {
+    font-size: 0.9em;
+  }
+
+  header, footer {
+    padding: 15px;
+  }
+}

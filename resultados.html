@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Resultados del Cálculo</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Meta para diseño responsivo -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Agregar el script de MathJax para notación matemática -->
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <!-- Font Awesome para los iconos -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body class="resultados">
+  <header>
+    <img src="logo.png" alt="Logo" class="logo">
+    <h1>Resultados del Cálculo de Transformador</h1>
+  </header>
+
+  <main>
+    <section class="resultados-container" id="resultados"></section>
+
+    <!-- Control deslizante para modificar el factor de corrección en tiempo real -->
+    <section class="simulacion-container">
+      <h2>Simulación en Tiempo Real</h2>
+      <label for="factorCorreccionSlider">Factor de Corrección: <span id="factorCorreccionValor">1.2</span></label>
+      <input type="range" id="factorCorreccionSlider" min="0.8" max="1.8" step="0.01" value="1.2" oninput="actualizarSimulacion(this.value)">
+    </section>
+
+    <!-- Sección de fórmulas -->
+    <section class="formulas-container">
+      <h2>Fórmulas Utilizadas</h2>
+      <button class="collapsible">Ver fórmulas</button>
+      <div class="content">
+        <p><strong>Sección Transversal del Núcleo:</strong></p>
+        <p>\[ S = \sqrt{P} \times \text{Factor de Corrección} \]</p>
+
+        <p><strong>Número de Espiras por Voltio:</strong></p>
+        <p>\[ N_v = \frac{K}{S} \]</p>
+
+        <p><strong>Espiras en el Primario y Secundario:</strong></p>
+        <p>\[ N_p = N_v \times V_p \]</p>
+        <p>\[ N_s = N_v \times V_s \]</p>
+
+        <p><strong>Resistencia del Devanado:</strong></p>
+        <p>\[ R = \frac{\rho \times L}{A} \]</p>
+
+        <p><strong>Eficiencia:</strong></p>
+        <p>\[ \eta = \left( \frac{P_{\text{salida}}}{P_{\text{entrada}}} \right) \times 100\% \]</p>
+      </div>
+    </section>
+
+    <section class="charts-container">
+      <h2>Gráficos de Desempeño</h2>
+      <canvas id="graficoEficienciaCarga"></canvas>
+      <canvas id="graficoRegulacionVoltaje"></canvas>
+      <canvas id="graficoVoltajeCorriente"></canvas>
+      <canvas id="graficoPotenciaCorriente"></canvas>
+    </section>
+  </main>
+
+  <footer>
+    <button onclick="exportarResultados()">Exportar Resultados</button>
+    <button onclick="window.print()">Imprimir Resultados</button>
+    <button onclick="window.location.href='index.html'">Volver al Inicio</button>
+    <p>&copy; 2024 Calculadora de Transformadores. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Scripts para exportar a PDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <!-- Plugin de zoom para Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@1.2.1/dist/chartjs-plugin-zoom.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
